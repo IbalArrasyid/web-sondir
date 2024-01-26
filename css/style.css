@@ -3,11 +3,16 @@
   --yellow:#f5bf23;
   --black:#111;
   --white:#fff;
+  --blue: #3498db;
+  --dark-blue: #2c3e50;
+  --accent-blue: #7fb3d5;
+  --light-blue: #5dade2;
   --light-color:#666;
   --light-white:#fff9;
   --light-black:#777;
   --light-bg:#eee;
   --main-color:#8e44ad;
+  --grey-bg: rgba(236,240,241,.8);
   --dark-bg:rgba(0,0,0,.7);
   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
   --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
@@ -37,7 +42,7 @@ html::-webkit-scrollbar-track {
   background: transparent;
 }
 html::-webkit-scrollbar-thumb {
-  background: var(--yellow);
+  background: var(--dark-blue);
 }
 
 section {
@@ -46,11 +51,10 @@ section {
 
 .heading {
   margin-bottom: 3rem;
-  font-size: 3rem;
-  color: var(--black);
+  font-size: 5rem;
+  color: var(--white);
   text-transform: capitalize;
-  padding-left: 1rem;
-  border-left: 1rem solid var(--yellow);
+  text-transform: uppercase;
 }
 
 .heading1 {
@@ -74,7 +78,7 @@ section {
   display: inline-block;
   margin-top: 1rem;
   padding: 1rem 3rem;
-  background: var(--black);
+  background: var(--dark-blue);
   color: var(--white);
   cursor: pointer;
   font-size: 1.7rem;
@@ -82,7 +86,7 @@ section {
   transition: 0.2s linear;
 }
 .btn:hover {
-  background: var(--yellow);
+  background: var(--blue);
   color: var(--black);
 }
 
@@ -108,27 +112,49 @@ section {
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
-  background: var(--white);
+  background: var(--dark-blue);
 }
-.header .logo {
-  font-size: 2.2rem;
-  color: var(--black);
-  text-transform: capitalize;
-  text-align: center;
+.header .logo-container {
+  flex: 0.5;
+  display: flex;
+  justify-content: flex-start;
+}
+.header .logo-container .logo {
+  display: flex;
+  align-items: left;
   text-decoration: none;
 }
-.header .logo span {
-  color: var(--yellow);
+.header .logo-container .logo img {
+  width: 90px;
+  height: auto;
+  margin-right: 10px;
+}
+.header .logo-container .logo .logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2.2rem;
+  color: var(--white);
+  text-transform: capitalize;
+  text-align: left;
+}
+.header .logo-container .logo .logo-text span {
+  color: var(--blue);
+}
+.header .navbar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 .header .navbar a {
   font-size: 1.7rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
   margin: 0 1rem;
   text-decoration: none;
 }
 .header .navbar a:hover {
-  color: var(--yellow);
+  color: var(--blue);
 }
 .header .icons div {
   height: 3rem;
@@ -178,7 +204,7 @@ section {
   margin: 0 1rem;
 }
 .header .search-form label:hover {
-  color: var(--yellow);
+  color: var(--blue);
 }
 .header .login-form {
   position: absolute;
@@ -198,7 +224,7 @@ section {
 }
 .header h3 {
   font-size: 2.5rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
   padding-bottom: 1rem;
   text-transform: uppercase;
@@ -237,7 +263,7 @@ section {
 }
 .header p {
   font-size: 1.5rem;
-  color: var(--light-color);
+  color: var(--white);
   line-height: 2;
   padding-top: 1.5rem;
 }
@@ -253,7 +279,7 @@ section {
   top: 0;
   right: 0;
   width: 35rem;
-  background: var(--white);
+  background: var(--dark-blue);
   height: 100%;
   text-align: center;
   z-index: 1100;
@@ -271,7 +297,7 @@ section {
   right: 1.5rem;
   cursor: pointer;
   font-size: 3rem;
-  color: var(--black);
+  color: var(--white);
 }
 .contact-info #close-contact-info:hover {
   transform: rotate(90deg);
@@ -295,13 +321,13 @@ section {
 }
 .contact-info .info h3 {
   font-size: 1.5rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
   padding: 1rem 0;
 }
 .contact-info .info p {
   font-size: 1.5rem;
-  color: var(--light-color);
+  color: var(--white);
   line-height: 2;
 }
 .contact-info .share {
@@ -342,7 +368,7 @@ section {
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(90deg, var(--white), transparent);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), transparent);
 }
 .home .slide .content {
   width: 50rem;
@@ -351,14 +377,14 @@ section {
 .home .slide .content h3 {
   font-size: 3rem;
   color: var(--black);
-  text-transform: capitalize;
   text-transform: uppercase;
 }
 .home .slide .content p {
   font-size: 2rem;
-  color: var(--light-color);
+  color: var(--white);
   line-height: 2;
   padding: 1rem 0;
+  color: var(--black);
 }
 .home .swiper-pagination {
   top: initial;
@@ -371,9 +397,12 @@ section {
   font-size: 3rem;
 }
 .home .swiper-pagination:hover {
-  color: var(--yellow);
+  color: var(--blue);
 }
 
+.about {
+  background-color: var(--dark-blue);
+}
 .about .row {
   display: flex;
   align-items: center;
@@ -391,37 +420,27 @@ section {
 }
 .about .row .content h3 {
   font-size: 3rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
 }
 .about .row .content p {
   font-size: 2rem;
-  color: var(--light-color);
+  color: var(--white);
   line-height: 2;
   padding: 1rem 0;
 }
-.about .box-container {
-  margin-top: 3rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 2rem;
-  align-items: flex-end;
-}
-.about .box-container .box {
-  text-align: center;
-  background: var(--light-bg);
-  padding: 3rem 2rem;
-}
-.about .box-container .box h3 {
-  font-size: 3rem;
+.about .row .content a.btn {
   color: var(--black);
-  text-transform: capitalize;
+  background-color: var(--white);
+  padding: 1rem 2rem;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
 }
-.about .box-container .box p {
-  font-size: 1.5rem;
-  color: var(--light-color);
-  line-height: 2;
-  padding-top: 0.5rem;
+.about .row .content a.btn:hover {
+  background-color: var(--blue);
+  color: var(--black);
 }
 
 .about1 {
@@ -442,20 +461,20 @@ section {
 }
 .about1 .content1 h3 {
   font-size: 4rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
   font-weight: 600;
 }
 .about1 .content1 h4 {
   font-size: 2rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
   margin-top: 5rem;
   font-weight: 600;
 }
 .about1 .content1 p {
   font-size: 1.5rem;
-  color: var(--light-color);
+  color: var(--white);
   line-height: 2;
 }
 .about1 .content1 .icons-container1 {
@@ -477,7 +496,7 @@ section {
 }
 .about1 .content1 .icons-container1 .icons1 h3 {
   font-size: 1.7rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
   display: block;
 }
@@ -516,7 +535,7 @@ section {
 }
 .mvv-container .mvv-block .content h1 {
   font-size: 3rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
   margin-top: 3rem;
   margin-bottom: 10px;
@@ -524,12 +543,16 @@ section {
 }
 .mvv-container .mvv-block .content p {
   font-size: 1.5rem;
-  color: var(--light-color);
+  color: var(--white);
   line-height: 2;
 }
 
 .services {
   background: var(--light-bg);
+  text-align: center;
+}
+.services h1.heading {
+  color: var(--black);
 }
 .services .box-container {
   display: grid;
@@ -553,28 +576,31 @@ section {
 }
 .services .box-container .box h3 {
   font-size: 2.5rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
   padding: 1rem 0;
+  color: var(--black);
 }
 .services .box-container .box p {
   font-size: 2rem;
-  color: var(--light-color);
+  color: var(--white);
   line-height: 2;
+  color: var(--black);
 }
 
 .services-2 {
   text-align: center;
 }
 .services-2 .box-container2 h3 {
-  font-size: 4rem;
-  color: var(--black);
+  font-size: 5rem;
+  color: var(--white);
   text-transform: capitalize;
   padding-bottom: 1rem;
+  color: var(--black);
 }
 .services-2 .box-container2 .hr {
   height: 3px;
-  background: var(--yellow);
+  background: var(--dark-blue);
   border: none;
   width: 100px;
   margin: auto;
@@ -583,18 +609,20 @@ section {
 }
 .services-2 .box-container2 p {
   font-size: 2rem;
-  color: var(--light-color);
+  color: var(--white);
   line-height: 2;
   letter-spacing: 0.8px;
   margin: auto;
   margin-bottom: 20px;
+  color: black;
 }
 
 .projects {
-  background: var(--black);
+  background: var(--dark-blue);
 }
 .projects .heading {
   color: var(--white);
+  text-align: center;
 }
 .projects .box-container {
   display: grid;
@@ -629,18 +657,20 @@ section {
 }
 .projects .box-container .box .content .info h3 {
   font-size: 1.7rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
+  color: var(--black);
 }
 .projects .box-container .box .content .info p {
   font-size: 1.5rem;
-  color: var(--light-color);
+  color: var(--white);
   line-height: 2;
+  color: var(--black);
 }
 .projects .box-container .box .content i {
   width: 7.5rem;
   font-size: 3rem;
-  background: var(--yellow);
+  background: var(--blue);
   color: var(--white);
   cursor: pointer;
   text-align: center;
@@ -681,12 +711,12 @@ section {
 }
 .projects1 .gallery .box .content h3 {
   font-size: 2rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
 }
 .projects1 .gallery .box .content p {
   font-size: 1.5rem;
-  color: var(--light-color);
+  color: var(--white);
   line-height: 2;
   color: var(--light-black);
   padding: 1rem 0;
@@ -698,7 +728,7 @@ section {
   position: relative;
   margin-bottom: 3rem;
   font-size: 1.5rem;
-  color: var(--light-color);
+  color: var(--white);
   line-height: 2;
 }
 .reviews .slide p::before {
@@ -722,7 +752,7 @@ section {
 }
 .reviews .slide .user h3 {
   font-size: 2rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
 }
 .reviews .slide .user .stars {
@@ -760,7 +790,7 @@ section {
 }
 .pricing .box-container .box h3 {
   font-size: 2rem;
-  color: var(--light-color);
+  color: var(--white);
   line-height: 2;
   font-weight: normal;
 }
@@ -768,7 +798,7 @@ section {
   padding: 1rem 0;
   font-size: 5rem;
   font-size: 5rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
 }
 .pricing .box-container .box .price span {
@@ -780,7 +810,7 @@ section {
 .pricing .box-container .box .list p {
   padding: 1rem 0;
   font-size: 1.4rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
 }
 
@@ -789,6 +819,7 @@ section {
 }
 .contact .heading {
   color: var(--black);
+  text-align: center;
 }
 .contact .row {
   display: flex;
@@ -806,8 +837,9 @@ section {
 }
 .contact .row form h3 {
   font-size: 2.5rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
+  color: var(--black);
 }
 .contact .row form .box {
   margin: 0.7rem 0;
@@ -827,6 +859,7 @@ section {
 
 .faqs .heading {
   color: var(--black);
+  text-align: center;
 }
 .faqs .accordion-container {
   padding: 0 20px;
@@ -836,13 +869,13 @@ section {
   cursor: pointer;
 }
 .faqs .accordion-container .accordion.active .accordion-heading {
-  background: var(--yellow);
+  background: var(--blue);
 }
 .faqs .accordion-container .accordion.active .accordion-heading h3 {
-  color: var(--white);
+  color: var(--black);
 }
 .faqs .accordion-container .accordion.active .accordion-heading i {
-  color: var(--white);
+  color: var(--black);
   transform: rotate(180deg);
   transition: transform 0.2s 0.1s;
 }
@@ -854,22 +887,22 @@ section {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  background: #fff;
+  background: var(--dark-blue);
   border: 2px solid #000;
   padding: 15px 20px;
 }
 .faqs .accordion-container .accordion .accordion-heading h3 {
   font-size: 2.5rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
 }
 .faqs .accordion-container .accordion .accordion-heading i {
   font-size: 2.5rem;
-  color: var(--black);
+  color: var(--white);
 }
 .faqs .accordion-container .accordion .accordion-content {
   font-size: 2rem;
-  color: var(--light-color);
+  color: var(--white);
   line-height: 2;
   color: var(--light-black);
   padding: 15px 20px;
@@ -903,7 +936,7 @@ section {
 }
 #contact1 .row form h3 {
   font-size: 2.5rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
 }
 #contact1 .row form .box {
@@ -924,6 +957,10 @@ section {
 
 .blogs {
   background: var(--light-bg);
+}
+.blogs .heading {
+  color: var(--black);
+  text-align: center;
 }
 .blogs .slide {
   text-align: center;
@@ -955,14 +992,16 @@ section {
 }
 .blogs .slide .content h3 {
   font-size: 2.5rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
+  color: var(--black);
 }
 .blogs .slide .content p {
   padding: 1rem 0;
   font-size: 2rem;
-  color: var(--light-color);
+  color: var(--white);
   line-height: 2;
+  color: var(--black);
 }
 
 .container .col-div-8 .blog-box {
@@ -996,11 +1035,15 @@ section {
 }
 .container .col-div-8 .blog-box .blog-box-s .conttent p:nth-child(1) {
   font-size: 2rem;
-  color: var(--light-color);
+  color: var(--white);
   line-height: 2;
   padding-bottom: 1rem;
 }
 
+.logo-container h1.heading {
+  color: var(--black);
+  text-align: center;
+}
 .logo-container img {
   height: 15rem;
   pointer-events: none;
@@ -1013,7 +1056,7 @@ section {
 }
 
 .footer {
-  background: var(--black);
+  background: var(--dark-blue);
 }
 
 .footer .box-container {
@@ -1025,7 +1068,7 @@ section {
 
 .footer .box-container .box h3 {
   font-size: 2rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
   padding-bottom: 2rem;
   color: var(--white);
@@ -1033,15 +1076,15 @@ section {
 
 .footer .box-container .box a {
   font-size: 1.3rem;
-  color: var(--light-color);
+  color: var(--white);
   line-height: 2;
   padding-bottom: 1rem;
   display: block;
-  color: var(--light-white);
+  color: var(--white);
 }
 
 .footer .box-container .box a i {
-  color: var(--main-color);
+  color: var(--blue);
   padding-right: 0.5rem;
   transition: 0.2s linear;
 }
@@ -1052,17 +1095,17 @@ section {
 
 .footer .credit {
   font-size: 2rem;
-  color: var(--black);
+  color: var(--white);
   text-transform: capitalize;
   color: var(--white);
   text-align: center;
   padding-top: 3rem;
   margin-top: 3rem;
-  border-top: 0.1rem solid var(--light-white);
+  border-top: 0.1rem solid var(--white);
 }
 
 .footer .credit span {
-  color: var(--yellow);
+  color: var(--blue);
 }
 
 .whatsapp-button {
@@ -1083,8 +1126,8 @@ section {
   background-color: #128C7E; /* Darker shade of WhatsApp green on hover */
 }
 .whatsapp-button a img {
-  width: 60px; /* Adjust the size as needed */
-  height: 60px; /* Adjust the size as needed */
+  width: 50px; /* Adjust the size as needed */
+  height: 50px; /* Adjust the size as needed */
 }
 
 @media (min-width: 1200px) {
