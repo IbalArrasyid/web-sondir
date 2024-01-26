@@ -3,11 +3,16 @@
   --yellow:#f5bf23;
   --black:#111;
   --white:#fff;
+  --blue: #3498db;
+  --dark-blue: #2c3e50;
+  --accent-blue: #7fb3d5;
+  --light-blue: #5dade2;
   --light-color:#666;
   --light-white:#fff9;
   --light-black:#777;
   --light-bg:#eee;
   --main-color:#8e44ad;
+  --grey-bg: rgba(236,240,241,.8);
   --dark-bg:rgba(0,0,0,.7);
   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
   --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
@@ -32,13 +37,13 @@
 
 @mixin titleText($titleSize) {
     font-size: $titleSize;
-    color: var(--black);
+    color: var(--white);
     text-transform: capitalize;
 }
 
 @mixin graphText($graphSize) {
     font-size: $graphSize;
-    color: var(--light-color);
+    color: var(--white);
     line-height: 2;
 }
 
@@ -72,7 +77,7 @@ html {
     }
 
     &::-webkit-scrollbar-thumb {
-        background: var(--yellow);
+        background: var(--dark-blue);
     }
 }
 
@@ -82,9 +87,8 @@ section {
 
 .heading {
     margin-bottom: 3rem;
-    @include titleText(3rem);
-    padding-left: 1rem;
-    border-left: 1rem solid var(--yellow);
+    @include titleText(5rem);
+    text-transform: uppercase;
 }
 
 .heading1{
@@ -109,7 +113,7 @@ section {
     display: inline-block;
     margin-top: 1rem;
     padding: 1rem 3rem;
-    background: var(--black);
+    background: var(--dark-blue);
     color: var(--white);
     cursor: pointer;
     font-size: 1.7rem;
@@ -117,7 +121,7 @@ section {
     transition:.2s linear;
 
     &:hover{
-        background: var(--yellow);
+        background: var(--blue);
         color: var(--black);
     }
 }
@@ -146,25 +150,51 @@ section {
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    background: var(--white);
+    background: var(--dark-blue);
 
-    .logo {
-        @include titleText(2.2rem);
-        text-align: center;
-        text-decoration: none;
+    .logo-container{
+        flex: 0.5;
+        display: flex;
+        justify-content: flex-start;
+        .logo {
+            display: flex;
+            align-items: left;
+            text-decoration: none;
 
-        span {
-            color: var(--yellow);
+            img {
+                width: 90px;
+                height: auto;
+                margin-right: 10px;
+            }
+
+            .logo-text{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                @include titleText(2.2rem);
+                text-align: left;
+
+                span {
+                    color: var(--blue);
+                }    
+            }
+            
         }
     }
 
-    .navbar a {
-        @include titleText(1.7rem);
-        margin: 0 1rem;
-        text-decoration: none;
+    .navbar {
+        flex: 1;
+        display: flex;
+        justify-content: center;
 
-        &:hover {
-            color: var(--yellow);
+        a {
+            @include titleText(1.7rem);
+            margin: 0 1rem;
+            text-decoration: none;
+
+            &:hover {
+            color: var(--blue);
+            }
         }
     }
 
@@ -209,7 +239,7 @@ section {
             margin: 0 1rem;
 
             &:hover {
-                color: var(--yellow);
+                color: var(--blue);
             }
         }
     }
@@ -294,7 +324,7 @@ section {
     position: fixed;
     top: 0; right: 0;
     width: 35rem;
-    background: var(--white);
+    background: var(--dark-blue);
     height: 100%;
     text-align: center;
     z-index: 1100;
@@ -312,7 +342,7 @@ section {
         top: 1rem; right: 1.5rem;
         cursor: pointer;
         font-size: 3rem;
-        color: var(--black);
+        color: var(--white);
 
         &:hover {
             transform: rotate(90deg);
@@ -366,7 +396,7 @@ section {
             top: 0; left: 0;
             height: 100%;
             width: 100%;
-            background: linear-gradient(90deg, var(--white), transparent);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), transparent);
 
         }
 
@@ -375,13 +405,15 @@ section {
             position: relative;
 
             h3 {
-                @include titleText(3rem);
+                font-size: 3rem;
+                color: var(--black);   
                 text-transform: uppercase;
             }
 
             p {
                 @include graphText(2rem);
                 padding: 1rem 0;
+                color: var(--black);
             }
         }
     }
@@ -397,7 +429,7 @@ section {
         font-size: 3rem;
 
         &:hover {
-            color: var(--yellow);
+            color: var(--blue);
         }
     }
 }
@@ -405,6 +437,8 @@ section {
 
 
 .about {
+    background-color: var(--dark-blue);
+
     .row {
         display: flex;
         align-items: center;
@@ -430,30 +464,25 @@ section {
                 @include graphText(2rem);
                 padding: 1rem 0;
             }
-        }
-    }
 
-    .box-container {
-        margin-top: 3rem;
-        @include grid(20rem);
-        align-items: flex-end;
+            a.btn {
+                color: var(--black);
+                background-color: var(--white); // Menghapus latar belakang tombol
+                padding: 1rem 2rem;
+                display: inline-block;
+                text-decoration: none;
+                border-radius: 0.5rem;
+                transition: background-color 0.3s ease;
 
-        .box {
-            text-align: center;
-            background: var(--light-bg);
-            padding: 3rem 2rem;
-
-            h3 {
-                @include titleText(3rem);
-            }
-
-            p {
-                @include graphText(1.5rem);
-                padding-top: .5rem;
+                &:hover {
+                    background-color: var(--blue);
+                    color: var(--black);
+                }
             }
         }
     }
 }
+
 
 .about1{
     display: flex;
@@ -568,6 +597,12 @@ section {
 
 .services {
     background: var(--light-bg);
+    text-align: center;
+
+    h1.heading{
+        color: var(--black);
+    }
+
 
     .box-container {
         @include grid(25rem);
@@ -592,10 +627,12 @@ section {
             h3 {
                 @include titleText(2.5rem);
                 padding: 1rem 0;
+                color: var(--black)
             }
 
             p {
                 @include graphText(2rem);
+                color: var(--black);
             }
         }
     }
@@ -608,13 +645,14 @@ section {
     .box-container2 {
 
         h3 {
-            @include titleText(4rem);
+            @include titleText(5rem);
             padding-bottom: 1rem;
+            color: var(--black);
         }
 
         .hr {
             height: 3px;
-            background: var(--yellow);
+            background: var(--dark-blue);
             border: none;
             width: 100px;
             margin: auto ;
@@ -627,16 +665,18 @@ section {
             letter-spacing: 0.8px;
             margin: auto;
             margin-bottom: 20px;
+            color: black;
         }
     }
 }
 
 
 .projects {
-    background: var(--black);
+    background: var(--dark-blue);
 
     .heading {
         color: var(--white);
+        text-align: center;
     }
 
     .box-container {
@@ -673,17 +713,19 @@ section {
 
                     h3 {
                         @include titleText(1.7rem);
+                        color: var(--black);
                     }
 
                     p {
                         @include graphText(1.5rem);
+                        color: var(--black);
                     }
                 }
 
                 i {
                     width: 7.5rem;
                     font-size: 3rem;
-                    background: var(--yellow);
+                    background: var(--blue);
                     color: var(--white);
                     cursor: pointer;
                     text-align: center;
@@ -845,6 +887,7 @@ section {
 
     .heading {
         color: var(--black);
+        text-align: center;
     }
 
     .row {
@@ -864,6 +907,7 @@ section {
 
             h3 {
                 @include titleText(2.5rem);
+                color: var(--black);
             }
             
             .box {
@@ -890,6 +934,7 @@ section {
 .faqs {
     .heading {
         color: var(--black);
+        text-align: center;
     }
 
     .accordion-container {
@@ -901,14 +946,14 @@ section {
 
             &.active {
                 .accordion-heading {
-                    background: var(--yellow);
+                    background: var(--blue);
 
                     h3{
-                        color: var(--white);
+                        color: var(--black);
                     }
 
                     i{
-                        color: var(--white);
+                        color: var(--black);
                         transform: rotate(180deg);
                         transition: transform .2s .1s;
                     }
@@ -925,7 +970,7 @@ section {
                 align-items: center;
                 justify-content: space-between;
                 gap: 10px;
-                background: #fff;
+                background: var(--dark-blue);
                 border: 2px solid #000;
                 padding: 15px 20px;
                 
@@ -935,7 +980,7 @@ section {
 
                 i {
                     font-size: 2.5rem;
-                    color: var(--black);
+                    color: var(--white);
                 }
             }
 
@@ -1006,6 +1051,11 @@ section {
 .blogs {
     background: var(--light-bg);
 
+    .heading{
+        color: var(--black);
+        text-align: center;
+    }
+
     .slide {
         text-align: center;
 
@@ -1038,11 +1088,13 @@ section {
 
             h3 {
                 @include titleText(2.5rem);
+                color: var(--black);
             }
 
             p {
                 padding: 1rem 0;
                 @include graphText(2rem);
+                color: var(--black);
             }
         }
     }
@@ -1095,7 +1147,10 @@ section {
 }
 
 .logo-container {
-    
+    h1.heading{
+        color: var(--black);
+        text-align: center;
+    }
 
     img {
         height: 15rem;
@@ -1108,7 +1163,7 @@ section {
 }
 
 .footer {
-    background: var(--black);
+    background: var(--dark-blue);
 }
 
 
@@ -1127,11 +1182,11 @@ section {
     @include graphText(1.3rem);
     padding-bottom: 1rem;
     display: block;
-    color: var(--light-white);
+    color: var(--white);
 }
 
 .footer .box-container .box a i {
-    color: var(--main-color);
+    color: var(--blue);
     padding-right: .5rem;
     transition: .2s linear;
 }
@@ -1146,12 +1201,12 @@ section {
     text-align: center;
     padding-top: 3rem;
     margin-top: 3rem;
-    border-top: .1rem solid var(--light-white);
+    border-top: .1rem solid var(--white);
 
 }
 
 .footer .credit span {
-    color: var(--yellow);
+    color: var(--blue);
 }
 
 .whatsapp-button {
@@ -1173,8 +1228,8 @@ section {
         }
 
         img {
-            width: 60px; /* Adjust the size as needed */
-            height: 60px; /* Adjust the size as needed */
+            width: 50px; /* Adjust the size as needed */
+            height: 50px; /* Adjust the size as needed */
         }
     }
   }
