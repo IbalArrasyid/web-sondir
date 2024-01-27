@@ -1,0 +1,92 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+  
+
+<div class="container wrapper-glance">
+                <div class="row justify-content-center content-title">
+                    <h2 class="text-white">
+                        Sekilas Tentang PAMA
+                    </h2>
+                </div>
+                <br />
+                <div class="row justify-content-around mb-md-4">
+                    <div class="col-md-5 our-faith order-md-2">
+                        <h3 class="py-1 text-warning d-block">
+                            Misi Kami
+                        </h3>
+                        <ul class="text-white">
+                            <li class="mb-2">
+                                Mengoptimalkan layanan tingkat dunia dengan manfaat terbaik untuk klien dalam bisnis pertambangan serta menyediakan energi dengan keunggulan operasional dan layanan yang dapat diandalkan untuk mendukung kemakmuran nasional
+                            </li>
+                            <li class="mb-2">
+                                Menciptakan peluang bagi karyawan untuk mengembangkan kompetensi mereka dalam mencapai tujuan mereka
+                            </li>
+                            <li class="mb-2">
+                                Terus berupaya menguasai kemampuan teknologi dan teknik dengan perspektif lingkungan dan keselamatan manusia untuk pembangunan bangsa dan negara
+                            </li>
+                            <li>
+                                Memberikan yang terbaik kepada pemegang saham
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5 our-vision order-md-1">
+                        <h3 class="py-1 text-warning d-block">
+                            Visi Kami
+                        </h3>
+                        <ul class="text-white">
+                            <li class="mb-1">
+                                Menjadi kontraktor penambangan terkemuka dunia dengan pemberian terbaik (produktivitas, teknik, keselamatan, dan lingkungan)
+                            </li>
+                            <li class="mb-1">
+                                Menjadi - 8 pemain batubara teratas di Indonesia dan pedagang batubara global
+                            </li>
+                            <li class="mb-1">
+                                Menjadi perusahaan jasa penambangan terintegrasi terbesar di Indonesia
+                            </li>
+                            <li>
+                                Menjadi produsen energi yang andal, hijau, dan paling efisien
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row justify-content-around mb-md-4">
+                    <div class="col-md-5 our-faith our-services order-md-2">
+                        <h3 class="py-1 text-warning">
+                            Layanan Terbaik Kami
+                        </h3>
+                        <p class="text-white">
+                            Sebagai salah satu kontraktor penambangan batubara terbesar di dunia, Pama memiliki kompetensi yang luas & pemahaman mendalam dalam hal pengembangan & operasi tambang batubara yang meliputi :
+                        </p>
+                    </div>
+                    <div class="col-md-5 our-faith order-md-2">
+                        <h3 class="py-1 text-warning">
+                            Kebijakan Mutu Kami
+                        </h3>
+                        <table class="text-white">
+                            <tr>
+                                <td>F</td>
+                                <td class="px-1">- </td>
+                                <td>Fokus pada pengembangan kompetensi dan menanamkan nilai inti perusahaan</td>
+                            </tr>
+                            <tr>
+                                <td>A</td>
+                                <td class="px-1">- </td>
+                                <td>Adanya lingkungan kerja yang sehat dan keselamatan kerja yang tinggi</td>
+                            </tr>
+                            <tr>
+                                <td>I</td>
+                                <td class="px-1">- </td>
+                                <td>Implementasi sistem manajemen yang berstandar internasional</td>
+                            </tr>
+                            <tr>
+                                <td>T</td>
+                                <td class="px-1">- </td>
+                                <td>Teknologi baru yang sesuai dengan optimalisasi kinerja keuangan perusahaan</td>
+                            </tr>
+                            <tr>
+                                <td>H</td>
+                                <td class="px-1">- </td>
+                                <td>Hubungan bisnis yang bernilai tambah tinggi dan komunikasi yang efektif</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
