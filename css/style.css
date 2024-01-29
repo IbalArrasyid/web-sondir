@@ -86,6 +86,7 @@ section {
   font-size: 1.7rem;
   text-transform: capitalize;
   transition: 0.2s linear;
+  border-radius: 6rem;
 }
 .btn:hover {
   background: var(--blue);
@@ -850,6 +851,9 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
+}
+.contact .row .btn {
+  border-radius: 0;
 }
 .contact .row .map {
   flex: 1 1 41rem;

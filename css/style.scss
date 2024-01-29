@@ -120,6 +120,7 @@ section {
     font-size: 1.7rem;
     text-transform: capitalize;
     transition:.2s linear;
+    border-radius: 6rem;
 
     &:hover{
         background: var(--blue);
@@ -923,6 +924,10 @@ section {
         display: flex;
         flex-wrap: wrap;
         gap: 3rem;
+
+        .btn{
+            border-radius: 0;
+        }
 
         .map {
             flex: 1 1 41rem;
