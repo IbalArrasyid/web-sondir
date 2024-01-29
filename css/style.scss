@@ -746,13 +746,19 @@ section {
 .projects1 {
     background: var(--light-bg);
 
+    .heading1{
+        h1 {
+            color: var(--black);
+        }
+    }
+
     .gallery {
         @include grid(30rem);
 
         .box {
             border: var(--border);
             box-shadow: var(--box-shadow);
-            background: var(--white);
+            background: var(--dark-blue);
             cursor: initial;
 
             &:hover .image img {
@@ -761,7 +767,7 @@ section {
 
 
             .image {
-                height: 25rem;
+                height: 30rem;
                 overflow: hidden;
 
                 img {
@@ -776,13 +782,29 @@ section {
                 padding: 2rem;
                 text-align: center;
 
+                a.btn{
+                    color: var(--black);
+                    background-color: var(--white); // Menghapus latar belakang tombol
+                    padding: 1rem 2rem;
+                    display: inline-block;
+                    text-decoration: none;
+                    border-radius: 0.5rem;
+                    transition: background-color 0.3s ease;
+    
+                    &:hover {
+                        background-color: var(--blue);
+                        color: var(--black);
+                    }
+                }
+
                 h3 {
                     @include titleText(2rem);
+                    color: var(--white);
                 }
 
                 p {
                     @include graphText(1.5rem);
-                    color: var(--light-black);
+                    color: var(--white);
                     padding: 1rem 0;
                 }
             }

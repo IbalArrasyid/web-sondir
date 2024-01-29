@@ -688,6 +688,9 @@ section {
 .projects1 {
   background: var(--light-bg);
 }
+.projects1 .heading1 h1 {
+  color: var(--black);
+}
 .projects1 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -696,14 +699,14 @@ section {
 .projects1 .gallery .box {
   border: var(--border);
   box-shadow: var(--box-shadow);
-  background: var(--white);
+  background: var(--dark-blue);
   cursor: initial;
 }
 .projects1 .gallery .box:hover .image img {
   transform: scale(1.1);
 }
 .projects1 .gallery .box .image {
-  height: 25rem;
+  height: 30rem;
   overflow: hidden;
 }
 .projects1 .gallery .box .image img {
@@ -717,16 +720,30 @@ section {
   padding: 2rem;
   text-align: center;
 }
+.projects1 .gallery .box .content a.btn {
+  color: var(--black);
+  background-color: var(--white);
+  padding: 1rem 2rem;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+.projects1 .gallery .box .content a.btn:hover {
+  background-color: var(--blue);
+  color: var(--black);
+}
 .projects1 .gallery .box .content h3 {
   font-size: 2rem;
   color: var(--white);
   text-transform: capitalize;
+  color: var(--white);
 }
 .projects1 .gallery .box .content p {
   font-size: 1.5rem;
   color: var(--white);
   line-height: 2;
-  color: var(--light-black);
+  color: var(--white);
   padding: 1rem 0;
 }
 
