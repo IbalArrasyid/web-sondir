@@ -505,17 +505,20 @@ section {
 
         h3 {
             @include titleText(4rem);
+            color: var(--black);
             font-weight: 600;
         }
 
         h4 {
             @include titleText(2rem);
+            color: var(--black);
             margin-top: 5rem;
             font-weight: 600;
         }
 
         p {
            @include graphText(1.5rem);
+           color: var(--black);
         }
 
         .icons-container1 {
@@ -533,11 +536,12 @@ section {
                 i {
                     font-size: 4rem;
                     margin-bottom: 2rem;
-                    color:var(--yellow);
+                    color:var(--blue);
                 }
 
                 h3 {
                     @include titleText(1.7rem);
+                    color: var(--black);
                     display:block;
                 }
             }
@@ -583,14 +587,16 @@ section {
             gap: 3rem;
 
             h1 {
-                @include titleText(3rem);
+                @include titleText(4rem);
+                color: var(--black);
                 margin-top: 3rem;
                 margin-bottom: 10px;
                 font-weight: 600;
             }
 
             p {
-                @include graphText(1.5rem);
+                @include graphText(2rem);
+                color: var(--black);
             }
         }
     }

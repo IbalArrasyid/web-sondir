@@ -465,12 +465,14 @@ section {
   font-size: 4rem;
   color: var(--white);
   text-transform: capitalize;
+  color: var(--black);
   font-weight: 600;
 }
 .about1 .content1 h4 {
   font-size: 2rem;
   color: var(--white);
   text-transform: capitalize;
+  color: var(--black);
   margin-top: 5rem;
   font-weight: 600;
 }
@@ -478,6 +480,7 @@ section {
   font-size: 1.5rem;
   color: var(--white);
   line-height: 2;
+  color: var(--black);
 }
 .about1 .content1 .icons-container1 {
   margin-top: 2rem;
@@ -494,12 +497,13 @@ section {
 .about1 .content1 .icons-container1 .icons1 i {
   font-size: 4rem;
   margin-bottom: 2rem;
-  color: var(--yellow);
+  color: var(--blue);
 }
 .about1 .content1 .icons-container1 .icons1 h3 {
   font-size: 1.7rem;
   color: var(--white);
   text-transform: capitalize;
+  color: var(--black);
   display: block;
 }
 
@@ -536,17 +540,19 @@ section {
   gap: 3rem;
 }
 .mvv-container .mvv-block .content h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   color: var(--white);
   text-transform: capitalize;
+  color: var(--black);
   margin-top: 3rem;
   margin-bottom: 10px;
   font-weight: 600;
 }
 .mvv-container .mvv-block .content p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--white);
   line-height: 2;
+  color: var(--black);
 }
 
 .services {
