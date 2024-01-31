@@ -744,6 +744,30 @@ section {
     }
 }
 
+.see-more-container {
+    text-align: center;
+    margin-top: 20px; /* Sesuaikan dengan kebutuhan Anda */
+}
+
+.see-more-btn {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    font-size: 2rem;
+
+    &:hover {
+        background-color: var(--blue);
+        color: var(--black);
+    }
+}
+
+
 .container-btn{
     display: flex;
     justify-content: center;
