@@ -113,6 +113,18 @@ accordions.forEach(acco => {
   }
 });
 
+$(document).ready(function() {
+  // Fungsi untuk menangani klik pada tombol filter
+  $('.filter-btn').on('click', function() {
+    var category = $(this).data('category');
 
-
-
+    // Menampilkan semua box jika kategori adalah 'all'
+    if (category === 'all') {
+      $('.box').show();
+    } else {
+      // Menyembunyikan semua box dan menampilkan yang sesuai dengan kategori
+      $('.box').hide();
+      $('.' + category).show();
+    }
+  });
+});
